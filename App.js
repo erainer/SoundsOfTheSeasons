@@ -1,45 +1,32 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import React, { Component } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './Components/Screens/HomeScreen';
+import FallScreen from './Components/Screens/FallScreen';
+import WinterScreen from './Components/Screens/WinterScreen';
+import SpringScreen from './Components/Screens/SpringScreen';
+import SummerScreen from './Components/Screens/SummerScreen';
+
 //import { Audio } from 'expo-av';
-
-function HomeScreen({navigation}) {
-  return (
-    <View>
-      <Text>Home</Text>
-      <Button 
-        title="GoToHalloween" 
-        onPress={() => navigation.navigate("Halloween")}
-      />
-    </View>
-  )
-}
-
-function HalloweenScreen() {
-  return (
-    <View>
-      <Text>Halloween</Text>
-      <Button 
-        title="Child Whispers" 
-        // onPress={() => navigation.navigate("Halloween")}
-      />
-    </View>
-  )
-}
 
 const Stack = createStackNavigator()
 
-export default function App() {
-  return (
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={HomeScreen}/>
-        <Stack.Screen name="Halloween" component={HalloweenScreen}/>
-      </Stack.Navigator>
-    </NavigationContainer>
-  );
+export default class App extends Component {
+  render() {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Sounds of the Seasons">
+          <Stack.Screen name="Sounds of the Seasons" component={HomeScreen}/>
+          <Stack.Screen name="Fall" component={FallScreen}/>
+          <Stack.Screen name="Winter" component={WinterScreen}/>
+          <Stack.Screen name="Spring" component={SpringScreen}/>
+          <Stack.Screen name="Summer" component={SummerScreen}/>
+        </Stack.Navigator>
+      </NavigationContainer>
+    );
+  }
 }
 
 const styles = StyleSheet.create({
