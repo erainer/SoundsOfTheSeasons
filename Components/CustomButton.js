@@ -1,22 +1,41 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 
-export default function CustomButton({ title, action }) {
+export default function CustomButton({ title, onPress, backgroundColor, textAndBorderColor }) {
+
     return (
-        <TouchableOpacity onPress={action}>
-            <View>
-                <Text>{ title }</Text>
+        <View style={styles.container}>
+            <View style={styles.buttonContainer}>
+                <TouchableOpacity
+                    style={[styles.button, {backgroundColor: backgroundColor, borderColor: textAndBorderColor}]}
+                    onPress={onPress}>
+                    <Text style={[styles.buttonText, {color: textAndBorderColor}]}>{title}</Text>
+                </TouchableOpacity>
             </View>
-        </TouchableOpacity>
+        </View>
     );
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
+	container: {
         alignItems: 'center',
         justifyContent: 'center',
-        borderColor: '#000000'
-      },
+        marginTop: 50
+	},
+	buttonContainer: {
+        height: 40,
+        width: 200,
+        margin: 5
+	},
+	button: {
+		flex: 1,
+		alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 10,
+        borderWidth: 2,
+	},
+	buttonText: {
+		fontSize: 18
+	}
 })
+
