@@ -4,7 +4,7 @@ import CustomButton from './CustomButton';
 import handlePlaySound from './handlePlaySound';
 import handleStopSound from './handleStopSound';
 
-const buttonBackgroundColor = 'black';
+const buttonBackgroundColor = 'white';
 const textAndBorderColor = '#5FA755';
 
 export default class StPatricksDayScreen extends Component {
@@ -20,9 +20,16 @@ export default class StPatricksDayScreen extends Component {
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="hello"
+                    title="Irish Violin"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('violin')}
+                />
+                <CustomButton 
+                    title="When He Was Young"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('stPatricksSong')}
                 />
                 
             </ImageBackground>

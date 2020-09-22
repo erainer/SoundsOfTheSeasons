@@ -21,6 +21,13 @@ const soundLibrary = {
 
     // Easter
     babyChicks: require('../assets/sounds/baby-chicks.wav'),
+    rooster: require('../assets/sounds/rooster.wav'),
+    peterCottontail: require('../assets/sounds/peter-cottontail.wav'),
+    amazingGraceBagpipes: require('../assets/sounds/amazing-grace-bagpipes.wav'),
+
+    // St Patricks Day
+    violin: require('../assets/sounds/violin.wav'),
+    stPatricksSong: require('../assets/sounds/when-he-was-young.wav'),
 
     // Spring Nature
     springBirdsChirping: require('../assets/sounds/spring-birds-chirping.wav'),
@@ -32,9 +39,18 @@ const soundLibrary = {
 
     // New Years
     fireCrackersPop: require('../assets/sounds/fire-crackers-pop.wav'),
+    countDown: require('../assets/sounds/count-down.wav'),
 
     // Christmas
-    sleighBells: require('../assets/sounds/sleigh-bells.wav'),
+    bells: require('../assets/sounds/sleigh-bells.wav'),
+    jingleBells: require('../assets/sounds/jingle-bells.wav'),
+    heatMiser: require('../assets/sounds/heatmiser.wav'),
+    hoHoHo: require('../assets/sounds/ho-ho-ho.wav'),
+
+    // Winter Nature
+    wind: require('../assets/sounds/wind.wav'),
+    avalanche: require('../assets/sounds/avalanche.wav'),
+    snowCrunch: require('../assets/sounds/snow-crunch.wav'),
 
     // Summer Nature and Events
     dolphins: require('../assets/sounds/dolphins.wav'),
@@ -43,13 +59,12 @@ const soundLibrary = {
     summerNight: require('../assets/sounds/summer-night-time.wav'),
     seaWaves: require('../assets/sounds/sea-waves.wav'),
     summerDay: require('../assets/sounds/summer-day.wav'),
+    waterfall: require('../assets/sounds/waterfall.wav'),
 
     // Fourth of July
     fireworksFinale: require('../assets/sounds/fireworks-finale.wav'),
     fireworks: require('../assets/sounds/fireworks.wav'),
-
-    wind: require('../assets/sounds/wind.wav'),
-    rooster: require('../assets/sounds/rooster.wav'),
+    starSpangledBanner: require('../assets/sounds/star-spangled-banner.wav'),
 }
 
 export default async function handlePlaySound(sound) {
