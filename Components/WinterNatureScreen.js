@@ -20,19 +20,22 @@ export default class WinterNatureScreen extends Component {
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="hello"
+                    title="Wind"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('wind')}
                 />
                 <CustomButton 
-                    title=""
+                    title="Avalanche"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('avalanche')}
                 />
                 <CustomButton 
-                    title=""
+                    title="Walking in Snow"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('snowCrunch')}
                 />
 
             </ImageBackground>

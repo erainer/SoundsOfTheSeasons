@@ -20,19 +20,28 @@ export default class ChristmasScreen extends Component {
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="hello"
+                    title="Bells"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('bells')}
                 />
                 <CustomButton 
-                    title=""
+                    title="Ho Ho Ho"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('hoHoHo')}
                 />
                 <CustomButton 
-                    title=""
+                    title="Jingle Bells"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('jingleBells')}
+                />
+                <CustomButton 
+                    title="Heat Miser"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('heatMiser')}
                 />
 
             </ImageBackground>

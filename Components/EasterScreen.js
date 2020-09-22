@@ -20,6 +20,27 @@ export default class EasterScreen extends Component {
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
+                    title="Peter Cottontail"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('peterCottontail')}
+                />
+
+                <CustomButton 
+                    title="Amazing Grace"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('amazingGraceBagpipes')}
+                />
+
+                    <CustomButton 
+                    title="Rooster"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('rooster')}
+                />
+
+                <CustomButton 
                     title="Baby Chicks"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}

@@ -20,7 +20,6 @@ import SpringNature from './Components/SpringNatureScreen'
 import SummerScreen from './Components/SummerScreen'
 import FourthOfJulyScreen from './Components/FourthOfJulyScreen'
 import SummerNatureScreen from './Components/SummerNatureScreen'
-import CustomHeader from './Components/CustomHeader'
 
 const Stack = createStackNavigator()
 
@@ -29,7 +28,7 @@ export default class App extends Component {
     return (
       <NavigationContainer>
         <Stack.Navigator initialRouteName="Sounds of the Seasons">
-          <Stack.Screen name="Sounds of the Seasons" component={HomeScreen}/>
+          <Stack.Screen name="Sounds of the Seasons" component={HomeScreen} />
 
           <Stack.Screen name="Fall" component={FallScreen}/>
           <Stack.Screen name="Halloween" component={HalloweenScreen}/>
@@ -56,3 +55,18 @@ export default class App extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  header: {
+      width: '100%',
+      height: '100%',
+      flex: 1,
+      alignItems: 'center',
+      backgroundColor: 'black'
+  },
+  text: {
+      fontWeight: 'bold',
+      fontSize: 20,
+      color: 'white',
+      letterSpacing: 1,
+  }
+})

@@ -6,7 +6,7 @@ import handleStopSound from './handleStopSound'
 
 
 const buttonBackgroundColor = 'white';
-const textAndBorderColor = '#ff7500';
+const textAndBorderColor = '#fe9c34';
 
 export default class ThanksgivingScree extends Component {
 

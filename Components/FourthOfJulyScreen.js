@@ -4,7 +4,7 @@ import CustomButton from './CustomButton'
 import handlePlaySound from './handlePlaySound'
 import handleStopSound from './handleStopSound'
 
-const buttonBackgroundColor = '#1A293E';
+const buttonBackgroundColor = 'black';
 const textAndBorderColor = 'white';
 
 export default class FourthOfJulyScreen extends Component {
@@ -30,6 +30,12 @@ export default class FourthOfJulyScreen extends Component {
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
                     onPress={() => handlePlaySound('fireworksFinale')}
+                />
+                <CustomButton 
+                    title="Star Spangled Banner"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('starSpangledBanner')}
                 />
                 
             </ImageBackground>

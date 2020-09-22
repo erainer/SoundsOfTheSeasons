@@ -26,14 +26,10 @@ export default class NewYearsScreen extends Component {
                     onPress={() => handlePlaySound('fireCrackersPop')}
                 />
                 <CustomButton 
-                    title=""
+                    title="Count Down"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                />
-                <CustomButton 
-                    title=""
-                    backgroundColor={buttonBackgroundColor}
-                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('countDown')}
                 />
 
             </ImageBackground>
