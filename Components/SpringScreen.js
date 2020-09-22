@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
+import CustomButton from './CustomButton';
+import handlePlaySound from './handlePlaySound';
+import handleStopSound from './handleStopSound';
+
+const buttonBackgroundColor = 'white';
+const textAndBorderColor = '#923069';
 
 export default class SpringScreen extends Component {
     render() {
@@ -10,12 +16,21 @@ export default class SpringScreen extends Component {
 
                 <CustomButton 
                     title="Easter"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Easter')}
                 />
                 <CustomButton 
                     title="St. Patrick's Day"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('St. Patricks Day')}
                 />
                 <CustomButton 
                     title="Nature"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Spring Nature')}
                 />
             </ImageBackground>
         );

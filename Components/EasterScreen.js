@@ -1,15 +1,29 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
+import CustomButton from './CustomButton';
+import handlePlaySound from './handlePlaySound';
+import handleStopSound from './handleStopSound';
+
+const buttonBackgroundColor = 'white';
+const textAndBorderColor = '#338DCC';
 
 export default class EasterScreen extends Component {
+
+    componentWillUnmount() {
+        handleStopSound()
+    }
+
     render() {
         return (
             <ImageBackground 
-                source={require('../assets/backgrounds/spring-background.jpg')}
+                source={require('../assets/backgrounds/easter-background.jpg')}
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title=""
+                    title="Baby Chicks"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('babyChicks')}
                 />
                 
             </ImageBackground>

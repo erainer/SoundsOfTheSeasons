@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
+import CustomButton from './CustomButton';
+import handlePlaySound from './handlePlaySound';
+import handleStopSound from './handleStopSound';
+
+const buttonBackgroundColor = 'white';
+const textAndBorderColor = '#76960F';
 
 export default class SummerScreen extends Component {
     render() {
@@ -7,11 +13,18 @@ export default class SummerScreen extends Component {
             <ImageBackground 
                 source={require('../assets/backgrounds/summer-background.jpg')}
                 style={{width: '100%', height: '100%'}}>
+
                 <CustomButton 
-                    title="FourthOfJuly"
+                    title="Fourth of July"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Fourth of July')}
                 />
                 <CustomButton 
-                    title="Nature"
+                    title="Nature and Events"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Summer Nature Events')}
                 />
             </ImageBackground>
         );
