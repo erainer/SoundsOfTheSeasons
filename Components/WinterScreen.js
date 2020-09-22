@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
+import CustomButton from './CustomButton';
+import handlePlaySound from './handlePlaySound';
+import handleStopSound from './handleStopSound';
+
+const buttonBackgroundColor = 'white';
+const textAndBorderColor = '#4E90C0';
 
 export default class WinterScreen extends Component {
     render() {
@@ -10,12 +16,21 @@ export default class WinterScreen extends Component {
 
                 <CustomButton 
                     title="Christmas"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Christmas')}
                 />
                 <CustomButton 
                     title="New Years"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('New Years')}
                 />
                 <CustomButton 
                     title="Nature"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => this.props.navigation.navigate('Winter Nature')}
                 />
 
             </ImageBackground>

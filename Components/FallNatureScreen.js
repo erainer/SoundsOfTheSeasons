@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
 import CustomButton from './CustomButton';
+import handlePlaySound from './handlePlaySound';
+import handleStopSound from './handleStopSound';
+
+const buttonBackgroundColor = 'white';
+const textAndBorderColor = '#7e817f';
 
 export default class FallNatureScreen extends Component {
+
+    componentWillUnmount() {
+        handleStopSound()
+    }
+
     render() {
         return (
             <ImageBackground 
@@ -11,21 +21,33 @@ export default class FallNatureScreen extends Component {
                 
                 <CustomButton 
                     title="Rain"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('rain')}
                 />
                 <CustomButton 
-                    title="Thunder"
+                    title="Rain with Thunder"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('rainWithThunder')}
                 />
                 <CustomButton 
-                    title="Leafs Crunching"
+                    title="Rustling Leaves"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('rustlingLeaves')}
                 />
                 <CustomButton 
-                    title="Candian Geese"
+                    title="Canadian Geese"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('canadianGeese')}
                 />
                 <CustomButton 
                     title="Bon Fire"
-                />
-                <CustomButton 
-                    title="Farmers Harvesting"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('fire')}
                 />
 
             </ImageBackground>
