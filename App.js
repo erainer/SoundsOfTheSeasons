@@ -1,32 +1,35 @@
 
-import { StatusBar } from 'expo-status-bar'
 import React, { Component } from 'react'
-import { StyleSheet } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
-import HomeScreen from './Components/HomeScreen'
-import FallScreen from './Components/FallScreen'
-import HalloweenScreen from './Components/HalloweenScreen'
-import ThanksgivingScreen from './Components/ThanksgivingScreen'
-import FallNatureScreen from './Components/FallNatureScreen'
-import WinterScreen from './Components/WinterScreen'
-import ChristmasScreen from './Components/ChristmasScreen'
-import NewYearsScreen from './Components/NewYearsScreen'
-import WinterNatureScreen from './Components/WinterNatureScreen'
-import SpringScreen from './Components/SpringScreen'
-import EasterScreen from './Components/EasterScreen'
-import StPatricksDayScreen from './Components/StPatricksDayScreen'
-import SpringNature from './Components/SpringNatureScreen'
-import SummerScreen from './Components/SummerScreen'
-import FourthOfJulyScreen from './Components/FourthOfJulyScreen'
-import SummerNatureScreen from './Components/SummerNatureScreen'
+import HomeScreen from './Components/Screens/HomeScreen'
+import FallScreen from './Components/Screens/Fall/FallScreen'
+import HalloweenScreen from './Components/Screens/Fall/HalloweenScreen'
+import ThanksgivingScreen from './Components/Screens/Fall/ThanksgivingScreen'
+import FallNatureScreen from './Components/Screens/Fall/FallNatureScreen'
+import WinterScreen from './Components/Screens/Winter/WinterScreen'
+import ChristmasScreen from './Components/Screens/Winter/ChristmasScreen'
+import NewYearsScreen from './Components/Screens/Winter/NewYearsScreen'
+import WinterNatureScreen from './Components/Screens/Winter/WinterNatureScreen'
+import SpringScreen from './Components/Screens/Spring/SpringScreen'
+import EasterScreen from './Components/Screens/Spring/EasterScreen'
+import StPatricksDayScreen from './Components/Screens/Spring/StPatricksDayScreen'
+import SpringNature from './Components/Screens/Spring/SpringNatureScreen'
+import SummerScreen from './Components/Screens/Summer/SummerScreen'
+import FourthOfJulyScreen from './Components/Screens/Summer/FourthOfJulyScreen'
+import SummerNatureScreen from './Components/Screens/Summer/SummerNatureScreen'
+import imageLibrary from './Components/imageLibrary'
+import { AppLoading } from 'expo'
+import SoundManager from './Components/SoundManager'
 
 const Stack = createStackNavigator()
 
-export default class App extends Component {
+export default class App extends React.Component {
   render() {
+    SoundManager.load()
     return (
-      <NavigationContainer>
+        <NavigationContainer>
+          
         <Stack.Navigator initialRouteName="Sounds of the Seasons">
           <Stack.Screen name="Sounds of the Seasons" component={HomeScreen} />
 
@@ -51,22 +54,7 @@ export default class App extends Component {
           
         </Stack.Navigator>
       </NavigationContainer>
-    );
+    )
   }
 }
 
-const styles = StyleSheet.create({
-  header: {
-      width: '100%',
-      height: '100%',
-      flex: 1,
-      alignItems: 'center',
-      backgroundColor: 'black'
-  },
-  text: {
-      fontWeight: 'bold',
-      fontSize: 20,
-      color: 'white',
-      letterSpacing: 1,
-  }
-})
