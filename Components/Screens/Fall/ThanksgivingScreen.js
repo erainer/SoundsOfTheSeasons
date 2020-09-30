@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, ImageBackground } from 'react-native'
-import CustomButton from './CustomButton'
-import handlePlaySound from './handlePlaySound'
-import handleStopSound from './handleStopSound'
+import CustomButton from '../../CustomButton'
+import handlePlaySound from '../../handlePlaySound'
+import handleStopSound from '../../handleStopSound'
 
 
 const buttonBackgroundColor = 'white';
@@ -17,7 +17,7 @@ export default class ThanksgivingScree extends Component {
     render() {
         return (
             <ImageBackground 
-                source={require('../assets/backgrounds/thanksgiving-background.jpg')}
+                source={require('../../../assets/backgrounds/thanksgiving-background.jpg')}
                 style={styles.background} >
                 <CustomButton 
                     title="Turkey Gobble"

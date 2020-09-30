@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
-import { ImageBackground } from 'react-native';
-import CustomButton from './CustomButton';
-import handlePlaySound from './handlePlaySound';
-import handleStopSound from './handleStopSound';
-
+import React, { Component } from 'react'
+import { ImageBackground } from 'react-native'
+import CustomButton from '../../CustomButton'
+import handlePlaySound from '../../handlePlaySound'
+import handleStopSound from '../../handleStopSound'
 const buttonBackgroundColor = 'black';
 const textAndBorderColor = '#ff7500';
 
@@ -17,14 +16,14 @@ export default class HalloweenScreen extends Component {
         return (
             
             <ImageBackground 
-                source={require('../assets/backgrounds/halloween-background.jpg')}
+                source={require('../../../assets/backgrounds/halloween-background.jpg')}
                 style={{width: '100%', height: '100%'}} >
 
                 <CustomButton 
                     title="Wolf Howl"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => handlePlaySound('howl')}
+                    onPress={() => handlePlaySound('howl') }
                 />
                 <CustomButton title="Ghost"
                     backgroundColor={buttonBackgroundColor}

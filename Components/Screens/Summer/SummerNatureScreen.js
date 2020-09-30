@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { StyleSheet, ImageBackground } from 'react-native'
-import CustomButton from './CustomButton'
-import handlePlaySound from './handlePlaySound'
-import handleStopSound from './handleStopSound'
+import CustomButton from '../../CustomButton'
+import handlePlaySound from '../../handlePlaySound'
+import handleStopSound from '../../handleStopSound'
 
 const buttonBackgroundColor = '#1A1116';
 const textAndBorderColor = '#FE7C66';
@@ -16,7 +16,7 @@ export default class SummerNatureScreen extends Component {
     render() {
         return (
             <ImageBackground 
-                source={require('../assets/backgrounds/summer-nature-background.jpg')}
+                source={require('../../../assets/backgrounds/summer-nature-background.jpg')}
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 

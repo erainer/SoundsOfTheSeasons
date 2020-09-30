@@ -1,31 +1,37 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
-import CustomButton from './CustomButton';
-import handlePlaySound from './handlePlaySound';
-import handleStopSound from './handleStopSound';
+import CustomButton from '../../CustomButton';
+import handlePlaySound from '../../handlePlaySound';
+import handleStopSound from '../../handleStopSound';
 
 const buttonBackgroundColor = 'white';
-const textAndBorderColor = '#76960F';
+const textAndBorderColor = '#5FA755';
 
-export default class SummerScreen extends Component {
+export default class StPatricksDayScreen extends Component {
+
+    componentWillUnmount() {
+        handleStopSound()
+    }
+
     render() {
         return (
             <ImageBackground 
-                source={require('../assets/backgrounds/summer-background.jpg')}
+                source={require('../../../assets/backgrounds/st-patricks-day-background.jpg')}
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="Fourth of July"
+                    title="Irish Violin"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Fourth of July')}
+                    onPress={() => handlePlaySound('violin')}
                 />
                 <CustomButton 
-                    title="Nature and Events"
+                    title="When He Was Young"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Summer Nature Events')}
+                    onPress={() => handlePlaySound('stPatricksSong')}
                 />
+                
             </ImageBackground>
         );
     }

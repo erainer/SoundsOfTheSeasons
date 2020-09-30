@@ -1,41 +1,36 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
-import CustomButton from './CustomButton';
-import handlePlaySound from './handlePlaySound';
-import handleStopSound from './handleStopSound';
+import CustomButton from '../../CustomButton';
+import handlePlaySound from '../../handlePlaySound';
+import handleStopSound from '../../handleStopSound';
 
 const buttonBackgroundColor = 'white';
-const textAndBorderColor = '#846759';
+const textAndBorderColor = '#4E90C0';
 
-export default class WinterNatureScreen extends Component {
-
-    componentWillUnmount() {
-        handleStopSound()
-    }
-
+export default class WinterScreen extends Component {
     render() {
         return (
             <ImageBackground 
-                source={require('../assets/backgrounds/winter-nature-background.jpg')}
+                source={require('../../../assets/backgrounds/winter-background.jpg')}
                 style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="Wind"
+                    title="Christmas"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => handlePlaySound('wind')}
+                    onPress={() => this.props.navigation.navigate('Christmas')}
                 />
                 <CustomButton 
-                    title="Avalanche"
+                    title="New Years"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => handlePlaySound('avalanche')}
+                    onPress={() => this.props.navigation.navigate('New Years')}
                 />
                 <CustomButton 
-                    title="Walking in Snow"
+                    title="Nature"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => handlePlaySound('snowCrunch')}
+                    onPress={() => this.props.navigation.navigate('Winter Nature')}
                 />
 
             </ImageBackground>

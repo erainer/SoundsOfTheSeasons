@@ -1,43 +1,52 @@
 import React, { Component } from 'react';
 import { StyleSheet, ImageBackground } from 'react-native';
-import CustomButton from './CustomButton';
+import CustomButton from '../../CustomButton';
+import handlePlaySound from '../../handlePlaySound';
+import handleStopSound from '../../handleStopSound';
 
 const buttonBackgroundColor = 'white';
-const textAndBorderColor = 'gray';
+const textAndBorderColor = '#338DCC';
 
-export default class HomeScreen extends Component {
+export default class EasterScreen extends Component {
+
+    componentWillUnmount() {
+        handleStopSound()
+    }
+
     render() {
         return (
-
             <ImageBackground 
-                source={require('../assets/backgrounds/all-four-seasons-background.jpeg')}
-                style={{width: '100%', height: '100%'}} >
+                source={require('../../../assets/backgrounds/easter-background.jpg')}
+                style={{width: '100%', height: '100%'}}>
 
                 <CustomButton 
-                    title="Fall"
+                    title="Peter Cottontail"
                     backgroundColor={buttonBackgroundColor}
                     textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Fall')}
+                    onPress={() => handlePlaySound('peterCottontail')}
                 />
-                <CustomButton 
-                    title="Winter"
-                    backgroundColor={buttonBackgroundColor}
-                    textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Winter')}
-                />
-                <CustomButton 
-                    title="Spring"
-                    backgroundColor={buttonBackgroundColor}
-                    textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Spring')}
-                />
-                <CustomButton 
-                    title="Summer"
-                    backgroundColor={buttonBackgroundColor}
-                    textAndBorderColor={textAndBorderColor}
-                    onPress={() => this.props.navigation.navigate('Summer')}
-                />  
 
+                <CustomButton 
+                    title="Amazing Grace"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('amazingGraceBagpipes')}
+                />
+
+                    <CustomButton 
+                    title="Rooster"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('rooster')}
+                />
+
+                <CustomButton 
+                    title="Baby Chicks"
+                    backgroundColor={buttonBackgroundColor}
+                    textAndBorderColor={textAndBorderColor}
+                    onPress={() => handlePlaySound('babyChicks')}
+                />
+                
             </ImageBackground>
         );
     }
@@ -48,13 +57,6 @@ const styles = StyleSheet.create({
       flex: 1,
       backgroundColor: '#fff',
       alignItems: 'center',
-      justifyContent: 'center'
+      justifyContent: 'center',
     },
-    buttons: {
-        backgroundColor: 'black'
-    },
-    backgroundImage: {
-        width: 400,
-        height: 800
-    }
   });
